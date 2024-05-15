@@ -25,6 +25,8 @@ import Header from '../components/Header';
 import IntlProvider from '../components/IntlProvider';
 import MissedPage from '../components/MissedPage';
 import SearchParamsConfigurator from '../components/SearchParamsConfigurator';
+import Books from "../../pageProviders/Book";
+import {Toaster} from "react-hot-toast";
 
 function App() {
   const dispatch = useDispatch();
@@ -54,6 +56,10 @@ function App() {
 
   return (
     <UserProvider>
+      <Toaster
+          position="top-center"
+          reverseOrder={false}
+      />
       <AuthoritiesProvider>
         <ThemeProvider>
           <BrowserRouter>
@@ -71,6 +77,15 @@ function App() {
                 )}
                 {!isFetchingUser && (
                   <Routes>
+
+                    <Route
+                        element={<Books/>}
+                        path={`${pageURLs[pages.books]}`}
+                    />
+                    <Route
+                        element={<Books/>}
+                        path={`${pageURLs[pages.books]}/:bookId`}
+                    />
                     <Route
                       element={<DefaultPage />}
                       path={`${pageURLs[pages.defaultPage]}`}
