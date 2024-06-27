@@ -27,6 +27,7 @@ import MissedPage from '../components/MissedPage';
 import SearchParamsConfigurator from '../components/SearchParamsConfigurator';
 import Books from "../../pageProviders/Book";
 import {Toaster} from "react-hot-toast";
+import Profile from "../../pageProviders/Profile";
 
 function App() {
   const dispatch = useDispatch();
@@ -77,7 +78,10 @@ function App() {
                 )}
                 {!isFetchingUser && (
                   <Routes>
-
+                    <Route
+                        element={<Profile/>}
+                        path={`${pageURLs[pages.profile]}`}
+                    />
                     <Route
                         element={<Books/>}
                         path={`${pageURLs[pages.books]}`}

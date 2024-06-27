@@ -184,7 +184,7 @@ function Header({
               {itemType === rightPanelItemTypes.LOGIN && (
                 <Link
                   to={{
-                    pathname: `${pagesURLs[pages.login]}`,
+                    pathname: `${pagesURLs[pages.profile]}`,
                   }}
                 >
                   <Button
@@ -196,7 +196,7 @@ function Header({
                       variant="subtitle"
                     >
                       <strong>
-                        {formatMessage({ id: 'signIn' })}
+                        {formatMessage({ id: 'profile' })}
                       </strong>
                     </Typography>
                   </Button>

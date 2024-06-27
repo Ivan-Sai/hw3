@@ -20,4 +20,6 @@ export const REQUEST_BOOK = 'REQUEST_BOOK'
 export const DELETE_BOOK = 'DELETE_BOOK';
 export const ERROR_BOOK_LIST = 'ERROR_BOOK_LIST';
 
+export const REQUEST_AUTH = 'REQUEST_AUTH';
+export const RECEIVE_AUTH = 'RECEIVE_AUTH';
 
