@@ -1,0 +1,17 @@
+{
+  "bookTitle": "Title",
+  "bookAuthor": "Author",
+  "yearPublished": "Year Published",
+  "bookGenres": "Genres",
+  "pages": "Number of pages",
+  "bookNoFound": "Book with that id is not found",
+  "create": "Create",
+  "deleteMessage": "Are you sure you want to delete this book?",
+  "yes": "Yes",
+  "no": "No",
+  "edit": "Edit",
+  "save": "Save",
+  "cancel": "Cancel",
+  "emptyBooks": "There is no books",
+  "filter": "Filter"
+}
