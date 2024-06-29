@@ -6,14 +6,14 @@ const getBook = (id) => {
     const {
         SERVER,
     } = config
-    return axios.get(`${SERVER}/api/book/${id}`)
+    return axios.get(`/api/book/${id}`)
 }
 
 const getBookList = (filterParams, page, size) => {
     const {
         SERVER,
     } = config
-    return axios.post(`${SERVER}/api/book/_list`, {
+    return axios.post(`/api/book/_list`, {
         ...filterParams,
         page,
         size
@@ -24,7 +24,7 @@ const deleteBook = (id) => {
     const {
         SERVER,
     } = config
-    return axios.delete(`${SERVER}/api/book/${id}`)
+    return axios.delete(`/api/book/${id}`)
 }
 
 
@@ -32,14 +32,14 @@ const createBook = (bookData) => {
     const {
         SERVER
     } = config
-    return axios.post(`${SERVER}/api/book`, bookData)
+    return axios.post(`/api/book`, bookData)
 }
 
 const editBook = (editData, id) => {
     const {
         SERVER
     } = config
-    return axios.put(`${SERVER}/api/book/${id}`, editData)
+    return axios.put(`/api/book/${id}`, editData)
 }
 
 const requestBookList = () => ({
