@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Button from "../../../components/Button";
 import axios from "axios";
-import config from "../../../config";
 import {useIntl} from "react-intl";
+import Cookies from 'js-cookie'
 
 function Profile() {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -27,7 +27,7 @@ function Profile() {
     };
 
     const handleLogout = () => {
-        document.cookie = "SESSION-ID=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        Cookies.remove('SESSION_ID')
         setIsAuthenticated(false);
     };
 
