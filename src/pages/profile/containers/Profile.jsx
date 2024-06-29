@@ -36,10 +36,10 @@ function Profile() {
             {isAuthenticated ?
                 <div>
                     <h1>Profile</h1>
-                    <p>Name: {user?.name}</p>
                     <p>{formatMessage({
                         id: "name"
-                    })}: {user?.email}</p>
+                    })}: {user?.name}</p>
+                    <p>Email: {user?.email}</p>
                     <Button onClick={handleLogout}>{formatMessage({
                         id: "ButtonLogout"
                     })}</Button>
