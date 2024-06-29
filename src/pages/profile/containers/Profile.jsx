@@ -7,11 +7,10 @@ import {useIntl} from "react-intl";
 function Profile() {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [user, setUser] = useState(null);
-    const { SERVER } = config;
     const {formatMessage} = useIntl();
 
     useEffect(() => {
-        axios.get(SERVER + '/api/profile')
+        axios.get('/api/profile')
             .then(response => {
                 setIsAuthenticated(true);
                 setUser(response);
@@ -24,7 +23,7 @@ function Profile() {
     }, []);
 
     const handleLogin = () => {
-        window.location.href = SERVER + '/oauth/authenticate';
+        window.location.href = '/oauth/authenticate';
     };
 
     return (
