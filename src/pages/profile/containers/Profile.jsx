@@ -26,6 +26,11 @@ function Profile() {
         window.location.href = '/oauth/authenticate';
     };
 
+    const handleLogout = () => {
+        document.cookie = "SESSION-ID=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        setIsAuthenticated(false);
+    };
+
     return (
         <div>
             {isAuthenticated ?
@@ -35,6 +40,9 @@ function Profile() {
                     <p>{formatMessage({
                         id: "name"
                     })}: {user?.email}</p>
+                    <Button onClick={handleLogout}>{formatMessage({
+                        id: "ButtonLogout"
+                    })}</Button>
                 </div>
                 :
                 <div>

@@ -1,5 +1,6 @@
 {
   "name" : "Name",
   "NotAuthenticated" : "Not authenticated",
-  "ButtonAuthenticate" : "Press here to authenticate"
+  "ButtonAuthenticate" : "Press here to authenticate",
+  "ButtonLogout" : "Press here to logout"
 }
